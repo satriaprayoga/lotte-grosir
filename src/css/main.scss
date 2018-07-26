@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import "~bootstrap/scss/bootstrap";
 
-<<<<<<< HEAD
 
 html,
 body,
@@ -113,62 +112,3 @@ nav {
   -webkit-transform: rotate(45deg) translate(-2px, -2px);
   transform: rotate(45deg) translate(-2px, -2px);
 }
-=======
-.navbar-toggler {
-  border: none;
-  background: transparent !important;
-  color: #fff;
-}
-
-.navbar-toggler:focus {
-  outline: none;
-  background: transparent !important;
-}
-
-.navbar-toggler .icon-bar {
-  background-color: #fff;
-  transform: rotate(0deg) translate(0px, 0px);
-  transition: ease all .2s;
-}
-
-.navbar-toggler .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-}
-
-.navbar-toggler .icon-bar+.icon-bar {
-  margin-top: 4px;
-}
-
-.icon-bar:nth-child(2) {
-  width: 16px;
-  transition: ease all .2s;
-}
-
-.navbar-toggler:hover>.icon-bar:nth-child(2) {
-  width: 22px;
-  transition: ease all .2s;
-}
-
-.navbar-toggler:active>.icon-bar:nth-child(2) {
-  width: 22px;
-  transition: ease all .2s;
-}
-
-.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 4px);
-  transition: ease all .2s;
-}
-
-.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
-  opacity: 0;
-  transition: ease all .2s;
-}
-
-.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -4px);
-  transition: ease all .2s;
-}
->>>>>>> 3aa8485ba3cede1a55a9b21c9cf8443a44ba2327
