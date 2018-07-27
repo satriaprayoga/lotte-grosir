@@ -15,8 +15,74 @@ nav {
 }
 
 /* begin lotte-nav */
+#lotteNav{
+  background-color:#fff;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
 
-.lottenav{
+#lotteNav .nav-left{
+  padding: 0;
+  width: auto;
+  max-height: 50px;
+  margin-top: 0px;
+  
+  line-height: 150px;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+
+}
+
+#lotteNav .row{
+  position: absolute;
+  top: 0;
+  left: 1;
+}
+
+#lotteNav .nav-item-collapse{
+  align-items: center;
+  font-size: 1rem;
+  justify-content: center;
+  height: auto;
+  min-height: 100%;
+}
+
+#lotteNav .bg-blue{
+  
+}
+
+
+
+#lotteNav .hamburger{
+  cursor: pointer;
+  background-color: #2384c6;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+}
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 2px;
+  background-color:#ccc;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 9px);
+  transform: rotate(-45deg) translate(-9px, 9px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-2px, -2px);
+  transform: rotate(45deg) translate(-2px, -2px);
+}
+
+/* .lottenav{
   align-items: stretch;
   background-color: #fff;
   display: flex;
@@ -57,7 +123,9 @@ nav {
   font-size: 1rem;
   justify-content: center;
   padding-top: .75rem;
-  padding-left: 1rem;
+  padding-left: .2rem;
+  padding-right: .5rem;
+  max-width: 75px;
 }
 .lottenav .nav-item.bg-red {
   background-color: #2384c6;
@@ -66,28 +134,22 @@ nav {
 .lottenav .nav-item.bg-grey {
   background-color: #e3e3e3;
 }
-.lottenav .nav-item.logo {
- margin-left: 10px;
- margin-top: -15px;
+.lottenav .logo {
+ margin-left: -50px;
 }
 .lottenav .nav-item a{
   color: #7a7a7a;
 }
-.lottenav .nav-item img {
+.lottenav .img {
  max-height: 1.75rem;
  //background: url(".../assets/img/lotte-grosir.png") no-repeat;
 }
 .lottenav .nav-item i{
-  width: 50px;
-}
-.fa{
-  font-size: 21px;
-  text-align: center;
-  vertical-align: top;
+  width: 30px;
 }
 .lottenav .hamburger{
   position: relative;
-  width: 50px;
+  width: 25px;
   height: 50px;
   cursor: pointer;
   transition: all .4s ease;
@@ -112,3 +174,8 @@ nav {
   -webkit-transform: rotate(45deg) translate(-2px, -2px);
   transform: rotate(45deg) translate(-2px, -2px);
 }
+
+#tmukNavbar{
+  background-color: #2384c6;
+  max-height: 80px;
+} */

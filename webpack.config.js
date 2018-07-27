@@ -1,42 +1,38 @@
-const path = require('path');
+const path=require('path');
 const webpack=require('webpack');
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const WebpackMd5Hash = require("webpack-md5-hash");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-module.exports = {
-    entry: {
-        main: './src/js/main.js',
-        vendor: './src/js/vendor.js'
+module.exports={
+    target:"web",
+    devtool:"source-map",
+    entry:{
+        index:'./src/index.js',
+        fontawesome:'./src/js/fontawesome'
     },
-    output: {
-        filename: '[name].[hash].js',
-        path: path.resolve(__dirname, 'dist')
+    output:{
+        path:path.join(__dirname,'dist'),
+        filename:'js/[name].js'
     },
-    devServer: {
-        contentBase: './dist',
-        hot: true
-    },
-    module: {
-        rules: [
+    module:{
+        rules:[
             {
-                test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader'
+                test:/\.js$/,
+                exclude:/node_modules/,
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:["env","minify"]
+                    }
                 }
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    {
-                        loader:'file-loader',
-                        options:{
-                            name: '/[name].[ext]',
-                        }
-                    }
-                ]
+                test:/\.html$/,
+                use:{
+                    loader:'html-loader',
+                    options:{minimize:true}
+                }
             },
             {
                 test: /\.s[c|a]ss$/,
@@ -48,42 +44,96 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            minimize: {
+                                discardComments: {
+                                    removeAll: true
+                                }
+                            }
+                        }
                     },
                     {
                         loader: 'postcss-loader',
-                        options: {
-                            plugins: function () {
-                                return [
-                                    require('autoprefixer')
-                                ];
-                            }
-                        }
                     },
                     {
                         loader: 'sass-loader'
                     }
                 ]
-            }
+            },
+            {
+                test: /\.(png|svg|jp?eg|gif)$/,
+                use: [
+                    {
+                        loader:'file-loader',
+                        options:{
+                            name: '/[name].[ext]',
+                            outputPath:"images/"
+                        }
+                    }
+                ]
+            },
         ]
     },
     plugins:[
-        new CleanWebpackPlugin('dist',{}),
+        new CleanWebpackPlugin(["dist"]),
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: '[name].css'
         }),
         new HtmlWebpackPlugin({
-            inject: false,
-            hash: false,
-            template: './src/index.html',
-            filename: 'index.html'
+			template: "src/index.html",
+			filename: "index.html"
         }),
-        new WebpackMd5Hash(),
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
 
         })
-    ]
-};
+    ],
+    optimization: {
+		splitChunks: {
+			cacheGroups: {
+				index: {
+					name: "index",
+					test: "index",
+					enforce: true
+				},
+				bootstrap: {
+					test: new RegExp("node_modules" + "\\" + path.sep + "bootstrap.*"),
+					chunks: "initial",
+					name: "bootstrap",
+					enforce: true
+				},
+				fontawesome: {
+					name: "fontawesome",
+					test: "fontawesome",
+					enforce: true
+				},
+				jquery: {
+					test: new RegExp("node_modules" + "\\" + path.sep + "jquery.*"),
+					chunks: "initial",
+					name: "jquery",
+					enforce: true
+				},
+				popper: {
+					test: new RegExp("node_modules" + "\\" + path.sep + "popper.*"),
+					chunks: "initial",
+					name: "popper",
+					enforce: true
+				}
+			}
+		}
+    },
+    devServer: {
+		host: "localhost",
+		port: 3000,
+		contentBase: "./public",
+		open: true,
+		inline: true,
+		disableHostCheck: true,
+		watchOptions: {
+			aggregateTimeout: 300,
+			poll: 1000
+		}
+	}
+}

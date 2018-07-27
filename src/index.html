@@ -4,35 +4,56 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
     <title>lotte-contacts</title>
   </head>
   <body class="contact-us">
     <noscript>
       <strong>We're sorry but lotte-contacts doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-<<<<<<< HEAD
-  
-    <header class="lottenav">
-      <div class="nav-content">
-           <div class="nav-left"> 
-              <a class="nav-item bg-red" id="trigger">
-                  <span class="hamburger">
-                      <div class="bar1"></div>
-                      <div class="bar2"></div>
-                      <div class="bar3"></div>
-                  </span>
-              </a>
-              <a href="#" class="nav-item logo">
-                  <img src="" id="logo">
-              </a>
-           </div>
+    <div id="lotteNav">
+      <div class="nav-left">
+          <a class="nav-item-collapse bg-blue" id="trigger">
+              <span class="hamburger">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </span>
+          </a>
       </div>
-  </header>
+    </div>
+
+   <!--  <nav class="navbar">
+        <div class="lottenav">
+            <div class="nav-content">
+                 <div class="row">
+                    <div class="col-md-5">
+                        <a class="nav-item bg-red" id="trigger">
+                            <span class="hamburger">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </span>
+                        </a>
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="navbar-brand logo">
+                            <img src="./images/lotte-grosir.png" id="logo">
+                        </a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </nav>
+  
+    
+  <div id="tmukNavbar">
+      <nav class="navbar navbar-light">
+          <a class="navbar-brand" href="#">TMUK</a>
+      
+        </nav>
+  </div> -->
     <!-- built files will be auto injected -->
-    <script src="<%= htmlWebpackPlugin.files.chunks.vendor.entry %>"></script>
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
   
 </html>
