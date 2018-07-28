@@ -18,47 +18,73 @@ nav {
 #lotteNav{
   background-color:#fff;
   display: flex;
-  justify-content: flex-start;
   padding: 0;
-  margin: 0;
+  margin-bottom: 0;
 }
 
 #lotteNav .nav-left{
-  padding: 0;
-  width: auto;
-  max-height: 50px;
-  margin-top: 0px;
+  list-style-type: none;
+  padding-top: 0;
+  padding-left: 0;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+
+
+#lotteNav .nav-left .nav-left-item{
   
-  line-height: 150px;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
-
-}
-
-#lotteNav .row{
-  position: absolute;
-  top: 0;
-  left: 1;
-}
-
-#lotteNav .nav-item-collapse{
-  align-items: center;
   font-size: 1rem;
-  justify-content: center;
-  height: auto;
-  min-height: 100%;
+  align-items: center;
+  width: auto;
+  padding-top: .5rem;
+  padding-left: .5rem;
+  padding-right: .75rem;
+  height: 48px;
 }
 
-#lotteNav .bg-blue{
-  
-}
 
-
-
-#lotteNav .hamburger{
-  cursor: pointer;
+#lotteNav .nav-left .bg-blue{
+  text-decoration: none;
   background-color: #2384c6;
+  width: 50px;
+}
+
+#lotteNav .nav-left .logo{
+  text-decoration: none;
+  padding-left: .75rem;
+  padding-top: .3rem;
+}
+
+#lotteNav .nav-right{
+  list-style-type: none;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  height: 48px;
+}
+
+#lotteNav .nav-right .bg-grey{
+  text-decoration: none;
+  background-color: #e3e3e3;
+  width: 50px;
+}
+
+#lotteNav .nav-right .nav-right-item{
+  align-items: center; 
+  padding-left: .75rem;
+  padding-bottom: .4rem;
+  padding-top: .5rem;
+  font-size: 20px;
+
+}
+
+#lotteNav .nav-left .hamburger{
+  cursor: pointer;
   transition: all .4s ease;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
@@ -68,8 +94,10 @@ nav {
 .bar1, .bar2, .bar3 {
   width: 25px;
   height: 2px;
-  background-color:#ccc;
-  margin: 6px 0;
+  background-color:#fff;
+  margin-top: 6px;
+  padding-left: auto;
+  padding-top: auto;
   transition: 0.4s;
 }
 .change .bar1 {
@@ -174,8 +202,10 @@ nav {
   -webkit-transform: rotate(45deg) translate(-2px, -2px);
   transform: rotate(45deg) translate(-2px, -2px);
 }
-
+*/
 #tmukNavbar{
+  display: block;
   background-color: #2384c6;
-  max-height: 80px;
-} */
+  margin-top: -17px;
+  padding: 0;
+} 
