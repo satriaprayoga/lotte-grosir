@@ -192,7 +192,6 @@ nav {
   margin-bottom: 74px;
   text-align: center;
   color: #2384c6;
-  font-size: 24px;
   
 }
 
@@ -206,11 +205,31 @@ nav {
 }
 
 .contact-form .registerInner{
-  margin: 15px;
+  margin: 10px;
 }
 
 .contact-form .headerSign{
   color: #2384c6;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.contact-form #embed_signup form{
+  display: block;
+  position: relative;
+  text-align: left;
+  padding: 10px 0 10px 3%
+}
+
+.contact-form #embed_signup .indicates-required{
+  text-align: right;
+    font-size: 11px;
+    margin-right: 4%;
+}
+.contact-form #embed_signup .asterix{
+    color: #e85c41;
+    font-size: 150%;
+    font-weight: normal;
+    position: relative;
+    top: 5px;
 }
