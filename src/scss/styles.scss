@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=ABeeZee");
 @import "~bootstrap/scss/bootstrap";
-
+@import "~select2/src/scss/core";
 
 html,
 body,
@@ -11,171 +11,284 @@ h4,
 h5,
 h6,
 nav {
-  font-family: 'Raleway', 'Arial';
+  font-family: 'ABeeZee', 'Arial';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app{
+  font-family: 'ABeeZee', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  margin-top: 0px;
+  height: auto;
+  width: auto;
+  background: #E4E6E5;
 }
 
 /* begin lotte-nav */
-#lotteNav{
-  background-color:#fff;
+.lottenav{
+  background: #ffffff;
   display: flex;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
-}
-
-#lotteNav .nav-left{
-  padding: 0;
-  width: auto;
   max-height: 50px;
-  margin-top: 0px;
-  
-  line-height: 150px;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
-
-}
-
-#lotteNav .row{
-  position: absolute;
-  top: 0;
-  left: 1;
-}
-
-#lotteNav .nav-item-collapse{
-  align-items: center;
-  font-size: 1rem;
-  justify-content: center;
-  height: auto;
-  min-height: 100%;
-}
-
-#lotteNav .bg-blue{
-  
-}
-
-
-
-#lotteNav .hamburger{
-  cursor: pointer;
-  background-color: #2384c6;
-  transition: all .4s ease;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  -o-transition: all .4s ease;
-}
-.bar1, .bar2, .bar3 {
-  width: 25px;
-  height: 2px;
-  background-color:#ccc;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 9px);
-  transform: rotate(-45deg) translate(-9px, 9px);
-}
-.change .bar2 {opacity: 0;}
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-2px, -2px);
-  transform: rotate(45deg) translate(-2px, -2px);
-}
-
-/* .lottenav{
-  align-items: stretch;
-  background-color: #fff;
-  display: flex;
-  min-height: 3.5rem;
-  position: relative;
-  text-align: center;
   z-index: 2;
+  .nav-content{
+    display: flex;
+    width: 100%;
+    border: 1px transparent #fff;
+    .nav-left{
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 0;
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    .nav-item {
+      font-size: 20px;
+      align-items: center;
+      display: flex;
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 20px;
+      justify-content: center;
+      padding-top: .75rem;
+      padding-left: 1rem;
+      
+    }
+    .logo{
+      padding-left: 10px;
+      padding-bottom: 15px;
+    }
+    .bg-red{
+      background-color: #2D87C5;
+      max-width: 60px;
+    }
+    .hamburger{
+      padding-top: 5px;
+      position: relative;
+      width: 52px;
+      height: 50px;
+      cursor: pointer;
+      transition: all .4s ease;
+      -webkit-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      -ms-transition: all .4s ease;
+      -o-transition: all .4s ease;
+  }
+  .bar1, .bar2, .bar3 {
+      width: 25px;
+      height: 2px;
+      background-color: #fff;
+      margin: 6px 0;
+      transition: 0.4s;
+  }
+  
+  .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 9px);
+      transform: rotate(-45deg) translate(-9px, 9px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-2px, -2px);
+      transform: rotate(45deg) translate(-2px, -2px);
+    }
+    .nav-right{
+      display: flex;
+      justify-content: flex-end;
+      .nav-item{
+        align-items: center; 
+        font-size: 24px;
+        background-color: #e3e3e3; 
+        max-width: 60px;
+        padding-right: .75rem;
+        padding-bottom: .4rem;
+        padding-top: .5rem;
+      }
+    }
+  }
 }
-.lottenav .nav-content{
-  align-items: stretch;
-  display: flex;
-  min-height: 3.5rem;
+/* end lotte-nav */
+
+/* begin navbar */
+.navbar{
+  background: #1158A8;
+}
+.navbar-light{
+    .navbar-nav{
+        margin-right: 50 px;
+        .nav-link{
+            background: #1158A8;
+            color:#FEF200;
+            font-size: 16px;
+            margin-right: 5px;
+            margin-left: 5px;
+            a {
+              &:hover{
+                font-weight: bold;
+                color:#FEF200;
+              }
+              &:active{
+                font-weight: bold;
+                color:#FEF200;
+              }
+            }
+        }
+    }
+} 
+/*end navbar */
+.welcome{
+  width: 100%;
+    top: 0;
+    left: 0;
+  .jumbotron{
+    background: linear-gradient(to bottom right,#1061B0,#2D87C5);
+    border-radius: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    .naration{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left:0px; 
+    }
+    .img-left{
+      margin-bottom: 0px;
+    }
+    .display-3{
+      font-size: 36px;
+      font-weight: 500;
+      color: #FEF200;
+    }
+    h2{
+      font-size: 36px;
+      color: #fff;
+    }
+    p,li{
+      color: #fff;
+      font-size: 14px;
+    }
+    .btn{
+      border-radius: 1px !important;
+      border-color:green;
+      border-width: 3px;
+      background-color:yellow;
+      color: rgb(3, 0, 0);
+      font-size: 18px;
+      font-weight: bold;
+      &:hover{
+        background-color: #fff;
+        color: rgb(3, 0, 0);
+      }
+    }
+  }
+}
+
+.content{
   width: 100%;
 }
-.lottenav .nav-left{
-  display: flex;
-  justify-content: flex-start;
-  overflow: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.lottenav .nav-left, 
-.nav-right{
-  align-items: stretch;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-.lottenav .nav-right {
-  justify-content: flex-end;
-}
-.lottenav .nav-item {
-  font-size: 20px;
-  align-items: center;
-  display: flex;
-  flex-grow: 0;
-  flex-shrink: 0;
-  font-size: 1rem;
-  justify-content: center;
-  padding-top: .75rem;
-  padding-left: .2rem;
-  padding-right: .5rem;
-  max-width: 75px;
-}
-.lottenav .nav-item.bg-red {
-  background-color: #2384c6;
-  justify-content: center;
-}
-.lottenav .nav-item.bg-grey {
-  background-color: #e3e3e3;
-}
-.lottenav .logo {
- margin-left: -50px;
-}
-.lottenav .nav-item a{
-  color: #7a7a7a;
-}
-.lottenav .img {
- max-height: 1.75rem;
- //background: url(".../assets/img/lotte-grosir.png") no-repeat;
-}
-.lottenav .nav-item i{
-  width: 30px;
-}
-.lottenav .hamburger{
-  position: relative;
-  width: 25px;
-  height: 50px;
-  cursor: pointer;
-  transition: all .4s ease;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  -o-transition: all .4s ease;
-}
-.bar1, .bar2, .bar3 {
-  width: 25px;
-  height: 2px;
-  background-color: #fff;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 9px);
-  transform: rotate(-45deg) translate(-9px, 9px);
-}
-.change .bar2 {opacity: 0;}
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-2px, -2px);
-  transform: rotate(45deg) translate(-2px, -2px);
+
+
+.benefit{
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    background: #E4E6E5;
+ 
+  .head_benefit{
+    text-align: center;
+    color: #2D87C5;
+    margin-bottom: 50px;
+    padding: 0
+  }
+  .img-benefit{
+    padding: 20px;
+    text-align: center;
+  }
+  img{
+    width: 150px;
+    height: 150px;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  h4{
+    font-size: 15px;
+  }
 }
 
-#tmukNavbar{
-  background-color: #2384c6;
-  max-height: 80px;
-} */
+.contact-form{
+  margin-top: 0;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: #E4E6E5; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  .head-form{
+    text-align: center;
+    color: #2D87C5;
+  }
+  .sub-head-form {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 18px;
+  }
+  .registeration{
+    border-top: 5px solid #2D87C5;
+    -webkit-box-shadow: 0px 5px 21px -2px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 0px 5px 21px -2px rgba(0, 0, 0, 0.47);
+    box-shadow: 0px 5px 21px -2px rgba(0, 0, 0, 0.47);
+    margin-bottom: 30px;
+    background-color: #fff;
+    font-weight: bold;
+  }
+  .registerInner{
+    margin: 10px;
+  }
+   .headerSign{
+    color: #2384c6;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  
+  #embed_signup{
+    form{
+      display: block;
+      position: relative;
+      text-align: left;
+      padding: 10px 0 10px 3%;
+    } 
+    .indicates-required{
+      text-align: right;
+        font-size: 11px;
+        margin-right: 4%;
+        margin-top: -5%;   
+    }
+    .asterix{
+      color: #e85c41;
+      font-size: 150%;
+      font-weight: normal;
+      position: relative;
+      top: 5px;
+    }
+    input{
+      border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px dotted #2D87C5!important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+  
+  }
+  
+   
+   
+  
+  }
+  
+}
