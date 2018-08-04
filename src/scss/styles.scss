@@ -13,7 +13,9 @@ h6,
 nav {
   font-family: 'ABeeZee', 'Arial';
 }
-
+body{
+  position: relative;
+}
 #app{
   font-family: 'ABeeZee', Helvetica, Arial, sans-serif;
   margin-top: 0px;
@@ -108,51 +110,29 @@ nav {
 /* end lotte-nav */
 
 /* begin navbar */
-.navbar{
-  background: #1158A8;
-  .navbar-nav{
-    margin-right: 50 px;
-    .nav-item{
-      color:#FEF200;
-      font-size: 18px;
-      margin-right: 5px;
-      margin-left: 5px;
-      &:hover{
-        color:#FEF200;
-        font-weight: bold;
-        text-decoration-line: underline;
-      }
-      &:active{
-        color:#FEF200;
-        font-weight: bold;
-        text-decoration-line: underline;
-      }
-  }
-  }
-}
 
-/*
 .navbar{
     background: #1158A8;
-    color:#FEF200;
     .navbar-nav{
         margin-right: 50 px;
         .nav-item{
-           color:#FEF200;
-            font-size: 16px;
-            margin-right: 5px;
-            margin-left: 5px;
             a {
+              color:#FEF200;
+              font-size: 16px;
+              margin-right: 5px;
+              margin-left: 5px;
               &:hover{
-                color:#FEF200;
+                font-weight: bold;
+                text-decoration-line: underline;
               }
               &:active{
+                text-decoration-line: underline;
                 font-weight: bold;
               }
             }
+          }
         }
-    }
-} 
+      }
 /*end navbar */
 .welcome{
   width: 100%;

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Be Our Partners</title>
   </head>
-  <body data-spy="scroll" data-offset="60" data-target="#app-navbar">
+  <body>
     <noscript>
         <strong>We're sorry but lotte-contacts doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
@@ -44,7 +44,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" style="color: #FEF200;">
+                    <li class="nav-item">
                       <a class="nav-link" href="#benefit">Keunggulan</a>
                     </li>
                     <li class="nav-item">
@@ -163,7 +163,7 @@
                             <div class="col-md-12">
                                 <h3 class="headerSign" style="padding-bottom: 30px;"></h3>
                                 <div id="embed_signup">
-                                    <form id="embed_subscribe_form">
+                                    <form id="embed_subscribe_form" action="./api/test.php" method="POST">
                                         <div class="indicates-required">
                                             <span class="asterix">*</span>
                                             wajib diisi
@@ -190,7 +190,19 @@
                                                 <span class="asterix">*</span>
                                             </label>
                                             <input type="tel" name="phone" class="form-control" >
-                                        </div>
+										</div>
+										<div class="form-group">
+                                            <label for="gender">
+                                                 Jenis Kelamin?
+                                            </label>
+                                            <br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender" id="pria" value="Pria" checked>Pria
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender" id="wanita" value="Wanita">Wanita
+                                            </div>
+										</div>
                                         <div class="form-group">
                                             <label for="domisili">
                                                 Domisili
@@ -730,9 +742,8 @@
 											<label for="media">
 												Kamu tahu TMUK dari?
 											</label>
-											<select name="media" id="media" class="form-control media">
-												<option value="">Pilih Salah Satu</option>
-												<option value="LinkedIn">LinkedIn</option>
+											<select name="media" id="media" class="form-control media" aria-placeholder="Pilih Salah Satu">
+												<!-- <option value="LinkedIn">LinkedIn</option>
 												<option value="Instagram">Instagram</option>
 												<option value="Twitter">Twitter</option>
 												<option value="Acara/Sosialisasi Warung Pintar">Acara/Sosialisasi Warung Pintar</option>
@@ -742,11 +753,13 @@
 												<option value="Youtube">Youtube</option>
 												<option value="Referensi Teman">Referensi Teman</option>
 												<option value="Whatsapp Group">Whatsapp Group</option>
-												<option value="Lainnya">Lainnya</option>
+												<option value="Lainnya">Lainnya</option> -->
 											</select>
 										</div>
 										<div class="form-group">
-												<input type="submit" value="Daftar Sekarang!(GRATIS)" class="button btn btn-block">
+												<button type="submit" class="button btn btn-block" id="submit_form">
+														Daftar Sekarang!(GRATIS)
+												</button>
 
 										</div>
                                     </form>

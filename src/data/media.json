@@ -1,0 +1,48 @@
+{
+    "media":[
+        {
+            "id":1,
+            "text":"LinkedIn"
+        },
+        {
+            "id":2,
+            "text":"Instagtam"
+        },
+        {
+            "id":3,
+            "text":"Twitter"
+        },
+        {
+            "id":4,
+            "text":"Acara/Sosialisasi Warung Pintar"
+        },
+        {
+            "id":5,
+            "text":"TV"
+        },
+        {
+            "id":6,
+            "text":"Google"
+        },
+        {
+            "id":7,
+            "text":"Facebook"
+        },
+        {
+            "id":8,
+            "text":"Youtube"
+        },
+        {
+            "id":9,
+            "text":"Referensi Teman"
+        },
+        {
+            "id":10,
+            "text":"WhatsApp Group"
+        },
+        {
+            "id":11,
+            "text":"Lainnya"
+        }
+    ]
+}
