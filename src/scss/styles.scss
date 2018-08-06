@@ -30,6 +30,8 @@ body{
   display: flex;
   max-height: 50px;
   z-index: 2;
+  position: sticky;
+  top:0;
   .nav-content{
     display: flex;
     width: 100%;
@@ -113,6 +115,8 @@ body{
 
 .navbar{
     background: #1158A8;
+    position: sticky;
+    top: 6%;
     .navbar-nav{
         margin-right: 50 px;
         .nav-item{
@@ -150,6 +154,7 @@ body{
     }
     .img-left{
       margin-bottom: 0px;
+      margin-left: 0px;
     }
     .display-3{
       font-size: 36px;
@@ -182,6 +187,20 @@ body{
 
 .content{
   width: 100%;
+}
+
+.feature{
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  background: #2d87c5;
+  .head_feature{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    padding: 0
+  }
 }
 
 .benefit{

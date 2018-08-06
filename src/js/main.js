@@ -12,10 +12,6 @@ const media = require('../data/media.json');
         data: media.media
     });
     
-    $('body').scrollspy({
-        target: '#navbarSupportedContent',
-        offset: 30
-    });
     var form=$("#embed_subscribe_form");
     $(form).submit(function(e){
         e.preventDefault();

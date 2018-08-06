@@ -35,12 +35,12 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg sticky-top" id="app-navbar">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="app-navbar">
                 <a class="navbar-brand" href="#welcome">
                     <img src="./images/logo-tmuk.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon" style="color: #fff;"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
@@ -66,7 +66,7 @@
               <div class="jumbotron jumbotron-fluid">
                   <div class="container">
                     <div class="row">
-                        <div class="col-sm-8 naration">
+                        <div class="col naration">
                             <div class="row">
                                 <h1 class="display-3">
                                     TOKO MITRA USAHA KITA-KITA
@@ -95,9 +95,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 img-left">
+                        <div class="col img-left">
                             <div>
-                                <img src="./images/tmuk-mart-opt.png">
+                                <img src="./images/tmuk-mart-opt.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,12 @@
                     </h4>
                 </div>
             </div>
-          </div>
+		  </div>
+		  <div class="feature" id="feature">
+			  <h1 class="head-feature">
+				  Fiture TMUK
+			  </h1>
+		  </div>
           <div id="form">
               <div class="container contact-form">
                 <h1 class="head-form">Punya Lahan Dan Tertarik Buka Usaha TMUK?</h1>
@@ -725,7 +730,14 @@
 											<option value="KABUPATEN DEIYAI">KABUPATEN DEIYAI</option>
 											<option value="KOTA JAYAPURA">KOTA JAYAPURA</option>
                                             </select>
-                                        </div>
+										</div>
+										<div class="form-group">
+                                            <label for="address">
+                                                Alamat Lengkap
+                                                <span class="asterix">*</span>
+                                            </label>
+                                            <input type="text" name="address" class="form-control" >
+										</div>
                                         <div class="form-group">
                                             <label for="Lahan">
                                                  Ada Lahan?
