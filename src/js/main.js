@@ -16,5 +16,18 @@ const media = require('../data/media.json');
         target: '#navbarSupportedContent',
         offset: 30
     });
-
+    var form=$("#embed_subscribe_form");
+    $(form).submit(function(e){
+        e.preventDefault();
+        var formData=$(form).serialize();
+        $.ajax({
+            type:"POST",
+            url:$(form).attr("action"),
+            data:formData
+        }).done(function(response){
+            console.log(response);
+        }).fail(function(err){
+            console.error(err);
+        });
+    });
 }(jQuery));
