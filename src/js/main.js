@@ -7,11 +7,28 @@ const media = require('../data/media.json');
         var hamburger = document.getElementsByClassName('hamburger')[0];
         hamburger.classList.toggle('change');
     });
+
+    var $window = $(window);
+   function checkWidth() {
+        var windowsize = $window.width();
+        if (windowsize < 500) {
+            $(".carousel-control").hide(1);
+            //$("#d_benefit").hide(1);
+            //$("#m_carousel").show(1);
+        }else{
+            $(".carousel-control").show(1);
+             //$("#d_benefit").show(1);
+            //$("#m_carousel").hide(1);
+        }
+    }
+    // Execute on load
+    checkWidth();
+    $window.on('resize',function(){checkWidth();});
     $('.domisili').select2();
     $('.media').select2({
         data: media.media
     });
-    
+    $("#embed_subscribe_form").validator();
     var form=$("#embed_subscribe_form");
     $(form).submit(function(e){
         e.preventDefault();

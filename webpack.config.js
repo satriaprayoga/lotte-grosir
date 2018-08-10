@@ -106,11 +106,18 @@ module.exports={
     optimization: {
 		splitChunks: {
 			cacheGroups: {
-				index: {
-					name: "index",
-					test: "index",
+                jquery: {
+					test: new RegExp("node_modules" + "\\" + path.sep + "jquery.*"),
+					chunks: "initial",
+					name: "jquery",
 					enforce: true
 				},
+				popper: {
+					test: new RegExp("node_modules" + "\\" + path.sep + "popper.*"),
+					chunks: "initial",
+					name: "popper",
+					enforce: true
+                },
 				bootstrap: {
 					test: new RegExp("node_modules" + "\\" + path.sep + "bootstrap.*"),
 					chunks: "initial",
@@ -122,16 +129,9 @@ module.exports={
 					test: "fontawesome",
 					enforce: true
 				},
-				jquery: {
-					test: new RegExp("node_modules" + "\\" + path.sep + "jquery.*"),
-					chunks: "initial",
-					name: "jquery",
-					enforce: true
-				},
-				popper: {
-					test: new RegExp("node_modules" + "\\" + path.sep + "popper.*"),
-					chunks: "initial",
-					name: "popper",
+                index: {
+					name: "index",
+					test: "index",
 					enforce: true
 				}
 			}
