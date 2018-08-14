@@ -36,7 +36,7 @@
 				</div>
 			</div>
 		</div>
-		<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="app-navbar">
+		<nav class="navbar navbar-light navbar-expand-lg sticky-top" id="app-navbar">
 			<a class="navbar-brand" href="#welcome">
 				<img src="./images/logo-tmuk.png" alt="" class="img-fluid">
 			</a>
@@ -375,7 +375,7 @@
 												<span class="asterix">*</span>
 											</label>
 											<input type="tel" name="phone" class="form-control" required="required" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*"
-											 data-error="format salah">
+											 data-error="isi telepon dengan format yang benar">
 											<div class="help-block with-errors"></div>
 										</div>
 										<div class="form-group">
@@ -395,7 +395,7 @@
 												Domisili
 												<span class="asterix">*</span>
 											</label>
-											<select name="domisili" id="domisili" class="form-control domisili">
+											<select name="domisili" id="domisili" class="form-control domisili" required="required" data-error="pilih satu domisili">
 												<option value="">Pilih Satu</option>
 												<option value="KABUPATEN SIMEULUE">KABUPATEN SIMEULUE</option>
 												<option value="KABUPATEN ACEH SINGKIL">KABUPATEN ACEH SINGKIL</option>
@@ -918,7 +918,7 @@
 												Alamat Lengkap
 												<span class="asterix">*</span>
 											</label>
-											<input type="text" name="address" class="form-control">
+											<textarea name="address" id="address" cols="30" rows="5" class="form-control" placeholder="Alamat Lengkap Domisili Anda"></textarea>
 										</div>
 										<div class="form-group">
 											<label for="Lahan">
