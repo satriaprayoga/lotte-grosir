@@ -63,7 +63,7 @@
               "Tahu TMUK dari: ".$media."\n";
     mail($recipient,$subject,$message,$headers);
     http_response_code(200);
-    echo "Thank You! ".$name." ".$email." Your message has been sent.";
+    echo $message;//"Thank You! ".$name." ".$email." Your message has been sent.";
   }else{
     http_response_code(400);
     exit;

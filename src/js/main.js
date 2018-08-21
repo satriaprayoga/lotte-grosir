@@ -1,4 +1,3 @@
-const media = require('../data/media.json');
 
 (function ($) {
 
@@ -25,9 +24,7 @@ const media = require('../data/media.json');
     checkWidth();
     $window.on('resize',function(){checkWidth();});
     $('.domisili').select2();
-    $('.media').select2({
-        data: media.media
-    });
+    $('.media').select2();
     $("#embed_subscribe_form").validator();
     var form=$("#embed_subscribe_form");
     $(form).submit(function(e){
