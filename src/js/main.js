@@ -21,8 +21,8 @@
         }
     }
     // Execute on load
-    checkWidth();
-    $window.on('resize',function(){checkWidth();});
+   // checkWidth();
+  //  $window.on('resize',function(){checkWidth();});
     $('.domisili').select2();
     $('.media').select2();
     $("#embed_subscribe_form").validator();
