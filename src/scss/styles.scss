@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=ABeeZee");
 @import "~bootstrap/scss/bootstrap";
 @import "~select2/src/scss/core";
+@import "~interactiveimagejs/src/scss/main";
 
 hhtml,
 body,
@@ -229,6 +230,7 @@ body{
       }
       img{
           width: 100%;
+          height: 100%;
       }
       .display-3{
         font-size: 36px;
@@ -415,7 +417,7 @@ body{
   .feature{
     padding-top: 72px;
     padding-bottom: 63px;
-    background-color: #2D87C5;
+    background-color: #fff;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -424,24 +426,37 @@ body{
     }
     #head-feature {
         text-align: center;
-        color: white;
+        color: #2D87C5;
         margin-top: 20px;
         margin-bottom: 30px;
         padding: 0;
     }
     #image-feature {
         display: block;
-        width: 100%;
+        width: 800px;
+        height: 600px;
         margin-top: 30px;
         margin-left: auto;
         margin-right: auto;
-        padding: 30px;
+        
         padding-top: 0;
+        background: url(../images/feature.png) no-repeat;
     }
     @media only screen and (max-width:600px){
         #head-feature{
             font-size: 22px;
         }
+        #image-feature {
+          display: block;
+          width: 400px;
+          height: 300px;
+          margin-top: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          
+          padding-top: 0;
+          background: url(../images/m-feature.png) no-repeat;
+      }
     }
   }
 
