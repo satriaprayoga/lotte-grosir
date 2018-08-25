@@ -7,8 +7,21 @@
         hamburger.classList.toggle('change');
     });
 
-    var $window = $(window);
-   function checkWidth() {
+    var items=[
+        {
+            type: "text",
+            title: "Nama Toko",
+            description: "Nama toko ditentukan sendiri oleh mitra TMUK",
+            position: {
+                left: 180,
+                top: 50
+            }
+        }
+    ];
+    $(".interactive-image").interactiveImage(items);
+
+   // var $window = $(window);
+   /* function checkWidth() {
         var windowsize = $window.width();
         if (windowsize < 500) {
             $(".carousel-control").hide(1);
@@ -19,7 +32,7 @@
              //$("#d_benefit").show(1);
             //$("#m_carousel").hide(1);
         }
-    }
+    } */
     // Execute on load
    // checkWidth();
   //  $window.on('resize',function(){checkWidth();});
