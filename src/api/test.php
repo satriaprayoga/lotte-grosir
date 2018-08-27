@@ -10,7 +10,7 @@
   $media="";
 
   $from="Mitra Lotte Grosir";
-  $recipient="mitralottegrosir@lottegrosir.com";
+  $recipient="mitragrosir@lottemart.co.id";
 
   if($_SERVER['REQUEST_METHOD']=='POST'){
     if(isset($_POST['name']));
