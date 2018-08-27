@@ -16,6 +16,7 @@ nav {
 }
 body{
   position: relative;
+  background: #E4E6E5;
 }
 #app{
   font-family: 'ABeeZee', Helvetica, Arial, sans-serif;
@@ -302,7 +303,7 @@ body{
   /*end jumbotron*/
   /*begin benefit*/
   .benefit{
-    margin-bottom: 0px;
+    margin: 0;
     padding-top: 20px;
     padding-left: 0;
     padding-right: 0;
@@ -416,8 +417,9 @@ body{
   /*end benefit*/
   /*begin interactive feature*/
   .feature{
-    padding-top: 72px;
+    padding-top: 0px;
     padding-bottom: 63px;
+   // background: #E4E6E5;
     background-color: #fff;
     margin-left: 0;
     margin-right: 0;
@@ -830,6 +832,9 @@ body{
   }
 }
 
+#form{
+  background-color: #E4E6E5; 
+}
 .contact-form{
   margin-top: 0;
   padding-top: 68px;
@@ -928,15 +933,21 @@ body{
   .contact{
     text-align: center;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
     color: #fff;
     h1{
       font-family: Arial, Helvetica, sans-serif;
       font-size: 20px;
     }
+    a{
+      color: #fff;
+    }
     .fab{
       font-size:48px;
       color: #fff;
+    }
+    span{
+      margin-top: 10px;
     }
   }
   @media only screen and (max-width:600){

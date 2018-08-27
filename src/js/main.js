@@ -5,6 +5,7 @@
     $('#trigger').on('click', function () {
         var hamburger = document.getElementsByClassName('hamburger')[0];
         hamburger.classList.toggle('change');
+        //$(".dropdown-menu").toggle();
     });
 
     var items=[
@@ -15,6 +16,15 @@
             position: {
                 left: 180,
                 top: 50
+            }
+        },
+        {
+            type: "text",
+            title: "Fitur",
+            description: "Ini jendela ada huruf L loh, wow!!",
+            position: {
+                left: 200,
+                top: 250
             }
         }
     ];
