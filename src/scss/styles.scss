@@ -435,7 +435,7 @@ body{
       padding: 0;
     }
     .interactive-image{
-      width: 900px;
+      width: 800px;
       height: 598px;
       background: url(../images/feature.png) no-repeat;
       margin: 60px auto 10px;
@@ -792,9 +792,6 @@ body{
 }
 
 @media only screen and (max-width: 397px) {
-  .testimonial_control_button .carousel-control {
-    display: none;
-  }
   .testimonial_header {
     width: 95%;
   }
