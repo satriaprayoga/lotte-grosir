@@ -25,13 +25,17 @@ body{
   width: auto;
   background: #E4E6E5;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 /* begin lotte-nav */
 .lottenav{
     background: #ffffff;
     display: flex;
     max-height: 50px;
     z-index: 2;
-    position: sticky;
     top:0;
     .nav-content{
       display: flex;
@@ -926,8 +930,10 @@ body{
 
 .app-footer{
   background: #2D87C5;
-  margin-bottom: 30px;
   position: absolute;
+  width: 100%;
+  overflow: auto;
+  max-height: 100%;
   .contact{
     text-align: center;
     padding-top: 60px;

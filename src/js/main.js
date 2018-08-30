@@ -1,11 +1,21 @@
 
 (function ($) {
 
+    $(window).scroll(function(){
+        if($(this).scrollTop()>0){
+            $(".lottenav").addClass('sticky');
+            $(".navbar").fadeOut('100ms');
+        }else{
+            $(".lottenav").removeClass('sticky');
+            $(".navbar").fadeIn('100ms');
+        }
+    });
     /*hamburger toggle*/
     $('#trigger').on('click', function () {
         var hamburger = document.getElementsByClassName('hamburger')[0];
         hamburger.classList.toggle('change');
         //$(".dropdown-menu").toggle();
+       
     });
 
     var items=[
